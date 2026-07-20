@@ -1,0 +1,10 @@
+{
+  "camera_name": "camera",
+  "width": 640,
+  "height": 480,
+  "channels": 4,
+  "timestamp": "2026-07-07_11-14-55-911",
+  "frame_count": 15171,
+  "image_path": "camera_image.bin",
+  "bytes_length": 1228800
+}

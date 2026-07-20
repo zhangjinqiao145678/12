@@ -1,0 +1,117 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/robodyno_webots/robots/SixDofCollaborationRobot.proto"
+EXTERNPROTO "../protos/robodyno_webots/objects/BaseBoard.proto"
+EXTERNPROTO "../protos/robodyno_webots/endEffector/Vacuum_Gripper.proto"
+EXTERNPROTO "../protos/robocom_webots/MaterialBox.proto"
+EXTERNPROTO "../protos/robocom_webots/MaterialTray.proto"
+EXTERNPROTO "../protos/robodyno_webots/camera/RobodynoCamera.proto"
+EXTERNPROTO "../protos/robocom_webots/Cruciform.proto"
+EXTERNPROTO "../protos/robocom_webots/FivePointed.proto"
+EXTERNPROTO "../protos/robocom_webots/Quincunx.proto"
+EXTERNPROTO "../protos/robocom_webots/Triangle.proto"
+EXTERNPROTO "../protos/robocom_webots/Pentagonal.proto"
+EXTERNPROTO "../protos/robocom_webots/Parallelogram.proto"
+EXTERNPROTO "../protos/robocom_webots/Cylindrical.proto"
+EXTERNPROTO "../protos/robocom_webots/Cube.proto"
+
+WorldInfo {
+  basicTimeStep 24
+}
+Viewpoint {
+  orientation 0.2001411750722378 0.1925961380918902 -0.9606509447415297 1.6492731811784993
+  position 0.21137623858440313 1.2394586563123262 0.6257804823203161
+}
+Robot {
+  name "word"
+  controller "word"
+  supervisor TRUE
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+SixDofCollaborationRobot {
+  translation 2.3067135103882388e-08 5.560674799440224e-07 -0.0011938686699482781
+  rotation 0.8198912678964774 -0.5725179928106571 -0.001206952842100547 0
+  baseChildren [
+    MaterialBox {
+      translation 0.19 -0.06 0
+    }
+    MaterialBox {
+      translation 0.19 0.08 0
+      name "MaterialBox(1)"
+    }
+    MaterialBox {
+      translation 0.19 0.01 0
+      name "MaterialBox(2)"
+    }
+    MaterialBox {
+      translation 0.19 -0.13 0
+      name "MaterialBox(3)"
+    }
+    BaseBoard {
+      translation -0.05 -0.05 -0.01
+    }
+    BaseBoard {
+      translation 0.3 -0.05 -0.01
+      name "BaseBoard(4)"
+    }
+    BaseBoard {
+      translation 0.08 0.3 -0.01
+      name "BaseBoard(5)"
+    }
+    MaterialTray {
+      translation 0.17 0.21 0
+      rotation 0 0 1 -5.307179586466759e-06
+    }
+    MaterialTray {
+      translation -0.01 0.21 0
+      rotation 0 0 1 -5.307179586466759e-06
+      name "MaterialTray(1)"
+    }
+  ]
+  endChildren [
+    RobodynoCamera {
+      translation -6.08886e-08 -0.04 -1.13156e-07
+      rotation -0.6623534383181627 -0.658985436089358 0.35640723585559575 2.84733e-06
+      controller "camera_capture_controller"
+    }
+    Vacuum_Gripper {
+      rotation 0 0 1 1.5708
+    }
+  ]
+  controller "robot_arm_controller"
+}
+Quincunx {
+  translation 0.15 0.02 0.015
+}
+Triangle {
+  translation 0.16 0.08 0.015
+}
+Pentagonal {
+  translation 0.22 -0.13 0.015
+}
+Cruciform {
+  translation 0.22 0.01 0.015
+  rotation 0 0 1 0.785398
+}
+FivePointed {
+  translation 0.22 0.07 0.015
+  name "FivePointed(1)"
+}
+Parallelogram {
+  translation 0.15 -0.12 0.025
+}
+Cylindrical {
+  translation 0.16 -0.06 0.025
+}
+Cube {
+  translation 0.22 -0.06 0.015
+}

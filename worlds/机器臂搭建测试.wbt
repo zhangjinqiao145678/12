@@ -1,0 +1,139 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/robodyno_webots/robots/SixDofCollaborationRobot.proto"
+EXTERNPROTO "../protos/robodyno_webots/robots/FlexibleArm.proto"
+EXTERNPROTO "../protos/robodyno_webots/joints/Pro_JP44.proto"
+EXTERNPROTO "../protos/robodyno_webots/joints/Pro_JP12.proto"
+EXTERNPROTO "../protos/robodyno_webots/objects/TBracket.proto"
+EXTERNPROTO "../protos/robodyno_webots/objects/CylinderConnector.proto"
+EXTERNPROTO "../protos/robodyno_webots/objects/ArmBase.proto"
+EXTERNPROTO "../protos/robodyno_webots/objects/PipeConnector.proto"
+EXTERNPROTO "../protos/robodyno_webots/objects/BaseBoard.proto"
+EXTERNPROTO "../protos/robodyno_webots/endEffector/Vacuum_Gripper.proto"
+EXTERNPROTO "../protos/robocom_webots/MaterialBox.proto"
+EXTERNPROTO "../protos/robocom_webots/MaterialTray.proto"
+EXTERNPROTO "../protos/robodyno_webots/camera/RobodynoCamera.proto"
+EXTERNPROTO "../protos/robocom_webots/Cuboid.proto"
+EXTERNPROTO "../protos/robocom_webots/Cruciform.proto"
+EXTERNPROTO "../protos/robocom_webots/Cube.proto"
+EXTERNPROTO "../protos/robocom_webots/FivePointed.proto"
+
+WorldInfo {
+  basicTimeStep 24
+}
+Viewpoint {
+  orientation 0.5076488048049882 0.3407774701213024 -0.7913048760356478 2.165009989732811
+  position 0.8041449011935373 0.7617100500154496 1.3096400875090721
+}
+Robot {
+  name "word"
+  controller "word"
+  supervisor TRUE
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+SixDofCollaborationRobot {
+  translation 2.3067135103882388e-08 5.560674799440224e-07 -0.0011938686699482781
+  rotation 0.8198912678964774 -0.5725179928106571 -0.001206952842100547 0
+  baseChildren [
+    MaterialBox {
+      translation 0.19 -0.06 0
+    }
+    MaterialBox {
+      translation 0.19 0.08 0
+      name "MaterialBox(1)"
+    }
+    MaterialBox {
+      translation 0.19 0.01 0
+      name "MaterialBox(2)"
+    }
+    MaterialBox {
+      translation 0.19 -0.13 0
+      name "MaterialBox(3)"
+    }
+    BaseBoard {
+      translation -0.05 -0.05 -0.01
+    }
+    BaseBoard {
+      translation 0.3 -0.05 -0.01
+      name "BaseBoard(4)"
+    }
+    BaseBoard {
+      translation 0.08 0.3 -0.01
+      name "BaseBoard(5)"
+    }
+    MaterialTray {
+      translation 0.17 0.21 0
+      rotation 0 0 1 -5.307179586466759e-06
+    }
+    MaterialTray {
+      translation -0.01 0.21 0
+      rotation 0 0 1 -5.307179586466759e-06
+      name "MaterialTray(1)"
+    }
+  ]
+  endChildren [
+    RobodynoCamera {
+      translation -6.08886e-08 -0.04 -1.13156e-07
+      rotation -0.6623534383181627 -0.658985436089358 0.35640723585559575 2.84733e-06
+      controller "camera_capture_controller"
+    }
+    Vacuum_Gripper {
+      rotation 0 0 1 1.5708
+    }
+  ]
+  controller "robot_arm_controller"
+}
+FlexibleArm {
+  translation 0.8 0 0
+  rotation 1 0 0 0
+  name "rpbot"
+  firstJointId "0x20"
+  baseChildren [
+  ]
+  endChildren [
+  ]
+  controller "rpbot"
+}
+Cuboid {
+  translation 0.15 -0.13 0.0225
+  rotation 0 0 1 -0.785395307179586
+}
+Cuboid {
+  translation 0.22 -0.06 0.0225
+  rotation 0 0 1 0.785398
+  name "Cuboid(1)"
+}
+Cruciform {
+  translation 0.22 0.01 0.015
+  rotation 0 0 1 0.785398
+}
+Cruciform {
+  translation 0.22 -0.131422 0.015
+  rotation 0 0 1 0.785398
+  name "Cruciform(1)"
+}
+Cube {
+  translation 0.15 0.0117156 0.0167156
+  rotation -3.69431e-07 -7.72301e-08 -1 -1.5707953071795862
+}
+Cube {
+  translation 0.16 0.0817156 0.0167156
+  rotation 3.07682e-07 -1.71606e-08 1 2.09439
+  name "Cube(1)"
+}
+FivePointed {
+  translation 0.15 -0.05 0.015
+}
+FivePointed {
+  translation 0.22 0.07 0.015
+  name "FivePointed(1)"
+}
